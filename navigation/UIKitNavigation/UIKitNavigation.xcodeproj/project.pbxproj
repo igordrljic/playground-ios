@@ -24,6 +24,8 @@
 		A803457A272C0B6100344D53 /* CityListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034579272C0B6100344D53 /* CityListNavigator.swift */; };
 		A803457C272C0C4B00344D53 /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803457B272C0C4B00344D53 /* CityDetailsViewController.swift */; };
 		A803457F272C0FF000344D53 /* PushNotificationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803457E272C0FF000344D53 /* PushNotificationNavigator.swift */; };
+		A80345C9273147D000344D53 /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80345C8273147D000344D53 /* CityService.swift */; };
+		A80345CB2731529700344D53 /* RootNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80345CA2731529700344D53 /* RootNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		A8034579272C0B6100344D53 /* CityListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListNavigator.swift; sourceTree = "<group>"; };
 		A803457B272C0C4B00344D53 /* CityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewController.swift; sourceTree = "<group>"; };
 		A803457E272C0FF000344D53 /* PushNotificationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationNavigator.swift; sourceTree = "<group>"; };
+		A80345C8273147D000344D53 /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
+		A80345CA2731529700344D53 /* RootNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				A803455B272BF6F500344D53 /* Info.plist */,
 				A803456A272C00D600344D53 /* HistoryViewController.swift */,
 				A803456C272C00EC00344D53 /* SettingsViewController.swift */,
+				A80345C8273147D000344D53 /* CityService.swift */,
+				A80345CA2731529700344D53 /* RootNavigator.swift */,
 			);
 			path = UIKitNavigation;
 			sourceTree = "<group>";
@@ -204,9 +210,11 @@
 				A8034571272C091A00344D53 /* SearchNavigationDelegate.swift in Sources */,
 				A803457F272C0FF000344D53 /* PushNotificationNavigator.swift in Sources */,
 				A8034569272C00C000344D53 /* SearchViewController.swift in Sources */,
+				A80345CB2731529700344D53 /* RootNavigator.swift in Sources */,
 				A8034573272C093400344D53 /* CityListViewController.swift in Sources */,
 				A803454E272BF6F300344D53 /* AppDelegate.swift in Sources */,
 				A8034567272C00A300344D53 /* MainNavigationDelegate.swift in Sources */,
+				A80345C9273147D000344D53 /* CityService.swift in Sources */,
 				A8034563272BFA7000344D53 /* MainNavigator.swift in Sources */,
 				A8034578272C0AC400344D53 /* CityListNavigationDelegate.swift in Sources */,
 				A8034550272BF6F300344D53 /* SceneDelegate.swift in Sources */,

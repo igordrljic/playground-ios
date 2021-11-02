@@ -36,7 +36,12 @@ class SearchViewController: UIViewController {
     }
     
     @objc private func showCitiesButtonAction() {
-        let cities = ["Belgrade", "Budapest", "Novi Sad", "Sarajevo", "Kopar", "Izola"]
+        let cities = [City(id: 0, name: "Belgrade"),
+                      City(id: 1, name: "Budapest"),
+                      City(id: 2, name: "Novi Sad"),
+                      City(id: 3, name: "Sarajevo"),
+                      City(id: 4, name: "Kopar"),
+                      City(id: 5, name: "Izola")]
         navigationDelegate.showCityList(cities: cities, animated: true, completion: {})
     }
 }

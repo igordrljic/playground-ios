@@ -8,9 +8,9 @@
 import UIKit
 
 class CityDetailsViewController: UIViewController {
-    var city: String = "" {
+    var city: City! {
         didSet {
-            cityLabel.text = city
+            cityLabel.text = city.name
         }
     }
     

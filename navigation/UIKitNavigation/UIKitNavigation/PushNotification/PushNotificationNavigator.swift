@@ -8,13 +8,17 @@
 class PushNotificationNavigator {
     static let shared = PushNotificationNavigator()
     private init() {}
-    func navigateToCityDetails(cities: [String], index: Int) {
-        MainNavigator.shared.showSearch()
-        MainNavigator.shared.searchNavigator.showCityList(cities: cities,
-                                                          animated: false,
-                                                          completion: {})
-        MainNavigator.shared.searchNavigator.cityListNavigator.showDetails(for: cities[index],
-                                                                           animated: false,
-                                                                           completion: {})
+    func navigateToCityDetails(cities: [City], id: CityID) {
+        guard let city = cities.first(where: { $0.id == id }) else {
+            return
+        }
+        let mainNavigator = MainNavigator.shared
+        mainNavigator.showSearch()
+        mainNavigator.searchNavigator.showCityList(cities: cities,
+                                                   animated: false,
+                                                   completion: {})
+        mainNavigator.searchNavigator.cityListNavigator.showDetails(for: city,
+                                                                    animated: false,
+                                                                    completion: {})
     }
 }

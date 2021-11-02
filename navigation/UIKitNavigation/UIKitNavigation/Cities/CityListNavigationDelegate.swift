@@ -6,5 +6,5 @@
 //
 
 protocol CityListNavigationDelegate: AnyObject {
-    func showDetails(for city: String, animated: Bool, completion: @escaping () -> Void)
+    func showDetails(for city: City, animated: Bool, completion: @escaping () -> Void)
 }

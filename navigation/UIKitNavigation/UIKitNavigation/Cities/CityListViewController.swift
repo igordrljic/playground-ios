@@ -8,7 +8,7 @@
 import UIKit
 
 class CityListViewController: UITableViewController {
-    var cities = [String]()
+    var cities = [City]()
     weak var navigationDelegate: CityListNavigationDelegate!
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class CityListViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell") else {
             fatalError("No cell found for identifier CityCell")
         }
-        cell.textLabel?.text = cities[indexPath.row]
+        cell.textLabel?.text = cities[indexPath.row].name
         return cell
     }
     

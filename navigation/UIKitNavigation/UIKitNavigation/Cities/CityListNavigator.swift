@@ -17,7 +17,7 @@ class CityListNavigator {
 }
 
 extension CityListNavigator: CityListNavigationDelegate {
-    func showDetails(for city: String, animated: Bool, completion: @escaping () -> Void) {
+    func showDetails(for city: City, animated: Bool, completion: @escaping () -> Void) {
         let cityDetailsViewController = CityDetailsViewController()
         cityDetailsViewController.city = city
         CATransaction.begin()

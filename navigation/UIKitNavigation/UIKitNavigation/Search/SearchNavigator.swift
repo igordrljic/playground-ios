@@ -18,7 +18,7 @@ class SearchNavigator {
 }
 
 extension SearchNavigator: SearchNavigationDelegate {
-    func showCityList(cities: [String], animated: Bool, completion: @escaping () -> Void) {
+    func showCityList(cities: [City], animated: Bool, completion: @escaping () -> Void) {
         let viewController = cityListNavigator.cityListViewController
         let navigationController = UINavigationController(rootViewController: viewController)
         viewController.cities = cities
