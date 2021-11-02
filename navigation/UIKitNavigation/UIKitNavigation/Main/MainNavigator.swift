@@ -8,8 +8,6 @@
 import UIKit
 
 class MainNavigator {
-    static let shared = MainNavigator()
-    
     let mainViewController = MainViewController()
     
     let searchNavigator = SearchNavigator()
@@ -33,7 +31,7 @@ class MainNavigator {
     
     private let tabs: [Tabs] = [.search, .history, .settings]
     
-    private init() {
+    init() {
         mainViewController.navigationDelegate = self
         setViewControllers()
     }

@@ -7,11 +7,15 @@
 
 import UIKit
 
+typealias RemoteNotification = [AnyHashable: Any]
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        PushNotificationManager.shared.notification = ["cityId": 3]
         return true
     }
 

@@ -23,9 +23,11 @@
 		A8034578272C0AC400344D53 /* CityListNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034577272C0AC400344D53 /* CityListNavigationDelegate.swift */; };
 		A803457A272C0B6100344D53 /* CityListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034579272C0B6100344D53 /* CityListNavigator.swift */; };
 		A803457C272C0C4B00344D53 /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803457B272C0C4B00344D53 /* CityDetailsViewController.swift */; };
-		A803457F272C0FF000344D53 /* PushNotificationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803457E272C0FF000344D53 /* PushNotificationNavigator.swift */; };
+		A803457F272C0FF000344D53 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803457E272C0FF000344D53 /* PushNotificationManager.swift */; };
 		A80345C9273147D000344D53 /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80345C8273147D000344D53 /* CityService.swift */; };
 		A80345CB2731529700344D53 /* RootNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80345CA2731529700344D53 /* RootNavigator.swift */; };
+		A80345CF273165F200344D53 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80345CE273165F200344D53 /* LoaderViewController.swift */; };
+		A80345D127316AE300344D53 /* PushNavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80345D027316AE300344D53 /* PushNavigationAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,9 +49,11 @@
 		A8034577272C0AC400344D53 /* CityListNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListNavigationDelegate.swift; sourceTree = "<group>"; };
 		A8034579272C0B6100344D53 /* CityListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListNavigator.swift; sourceTree = "<group>"; };
 		A803457B272C0C4B00344D53 /* CityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewController.swift; sourceTree = "<group>"; };
-		A803457E272C0FF000344D53 /* PushNotificationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationNavigator.swift; sourceTree = "<group>"; };
+		A803457E272C0FF000344D53 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		A80345C8273147D000344D53 /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
 		A80345CA2731529700344D53 /* RootNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigator.swift; sourceTree = "<group>"; };
+		A80345CE273165F200344D53 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		A80345D027316AE300344D53 /* PushNavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNavigationAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,9 @@
 		A803454C272BF6F300344D53 /* UIKitNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				A80345CD2731606700344D53 /* Services */,
 				A803457D272C0FDC00344D53 /* PushNotification */,
+				A80345CC2731605B00344D53 /* Root */,
 				A8034574272C0A2D00344D53 /* Main */,
 				A8034575272C0A3200344D53 /* Search */,
 				A8034576272C0A3E00344D53 /* Cities */,
@@ -93,8 +99,7 @@
 				A803455B272BF6F500344D53 /* Info.plist */,
 				A803456A272C00D600344D53 /* HistoryViewController.swift */,
 				A803456C272C00EC00344D53 /* SettingsViewController.swift */,
-				A80345C8273147D000344D53 /* CityService.swift */,
-				A80345CA2731529700344D53 /* RootNavigator.swift */,
+				A80345CE273165F200344D53 /* LoaderViewController.swift */,
 			);
 			path = UIKitNavigation;
 			sourceTree = "<group>";
@@ -133,9 +138,26 @@
 		A803457D272C0FDC00344D53 /* PushNotification */ = {
 			isa = PBXGroup;
 			children = (
-				A803457E272C0FF000344D53 /* PushNotificationNavigator.swift */,
+				A803457E272C0FF000344D53 /* PushNotificationManager.swift */,
 			);
 			path = PushNotification;
+			sourceTree = "<group>";
+		};
+		A80345CC2731605B00344D53 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A80345CA2731529700344D53 /* RootNavigator.swift */,
+				A80345D027316AE300344D53 /* PushNavigationAction.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		A80345CD2731606700344D53 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A80345C8273147D000344D53 /* CityService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,18 +230,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8034571272C091A00344D53 /* SearchNavigationDelegate.swift in Sources */,
-				A803457F272C0FF000344D53 /* PushNotificationNavigator.swift in Sources */,
+				A803457F272C0FF000344D53 /* PushNotificationManager.swift in Sources */,
 				A8034569272C00C000344D53 /* SearchViewController.swift in Sources */,
 				A80345CB2731529700344D53 /* RootNavigator.swift in Sources */,
 				A8034573272C093400344D53 /* CityListViewController.swift in Sources */,
 				A803454E272BF6F300344D53 /* AppDelegate.swift in Sources */,
 				A8034567272C00A300344D53 /* MainNavigationDelegate.swift in Sources */,
+				A80345D127316AE300344D53 /* PushNavigationAction.swift in Sources */,
 				A80345C9273147D000344D53 /* CityService.swift in Sources */,
 				A8034563272BFA7000344D53 /* MainNavigator.swift in Sources */,
 				A8034578272C0AC400344D53 /* CityListNavigationDelegate.swift in Sources */,
 				A8034550272BF6F300344D53 /* SceneDelegate.swift in Sources */,
 				A803456B272C00D600344D53 /* HistoryViewController.swift in Sources */,
 				A8034565272C007B00344D53 /* MainViewController.swift in Sources */,
+				A80345CF273165F200344D53 /* LoaderViewController.swift in Sources */,
 				A803457C272C0C4B00344D53 /* CityDetailsViewController.swift in Sources */,
 				A803456D272C00EC00344D53 /* SettingsViewController.swift in Sources */,
 				A803456F272C08FC00344D53 /* SearchNavigator.swift in Sources */,

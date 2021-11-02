@@ -33,23 +33,3 @@ class AsyncCityService: CityService {
         }
     }
 }
-
-class PushNotificationSimulator {
-    private let cityService: CityService
-    private let pushNavigator = PushNotificationNavigator.shared
-    
-    init(cityService: CityService) {
-        self.cityService = cityService
-    }
-    
-    func simulateCityDetailsPush(id: CityID) {
-        cityService.getCities { result in
-            switch result {
-            case let .success(cities):
-                self.pushNavigator.navigateToCityDetails(cities: cities, id: id)
-            case .failure:
-                break
-            }
-        }
-    }
-}
