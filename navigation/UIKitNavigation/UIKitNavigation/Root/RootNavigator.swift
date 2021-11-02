@@ -10,7 +10,7 @@ import UIKit
 class RootNavigator {
     static let shared = RootNavigator()
     var window: UIWindow?
-    private (set) var mainNavigator = MainNavigator()
+    private let mainNavigator = MainNavigator()
     
     private init() {}
     
